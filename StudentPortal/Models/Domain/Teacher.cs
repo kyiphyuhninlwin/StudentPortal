@@ -40,10 +40,13 @@
         public string Address { get; set; }
         public Guid GenderID { get; set; }
         public Gender Gender { get; set; }
-        public Guid DeptID { get; set; }
-        public Guid CourseID { get; set; }
-        public Course Course { get; set; }
-        public Guid SubjID { get; set; }
+
+        #region Relationships
+        public Guid SubjectId { get; set; } 
         public Subject Subject { get; set; }
+        public ICollection<TeacherCourse> TeacherCourses { get; set; }
+        public ICollection<Lesson> Lessons { get; set; }
+        public ICollection<Assignment> Assignments { get; set; }
+        #endregion
     }
 }

@@ -31,7 +31,10 @@ namespace StudentPortal.Models.DTO
         public DateTime JoinDate { get; set; }
         public Guid CourseID { get; set; }
         public CourseDTO Course { get; set; }
-        public List<SubjectDTO> Subjects { get; set; } = new List<SubjectDTO>();
+        public ICollection<TeacherDTO> Teachers { get; set; } = new List<TeacherDTO>();
+        public ICollection<SubjectDTO> Subjects { get; set; } = new List<SubjectDTO>();
+        public ICollection<LessonDTO> Lessons { get; set; } = new List<LessonDTO>();
+        public ICollection<AssignmentDTO> Assignments { get; set; } = new List<AssignmentDTO>();
 
     }
 

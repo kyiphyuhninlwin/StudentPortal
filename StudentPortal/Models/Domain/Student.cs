@@ -26,8 +26,14 @@
         public Gender Gender { get; set; }
         public string Address { get; set; }
         public DateTime JoinDate { get; set; }
+
+        #region Relationships
         public Guid CourseID { get; set; }
         public Course Course { get; set; }
+        public ICollection<Teacher> Teachers { get; set; }
         public ICollection<Subject> Subjects { get; set; }
+        public ICollection<Lesson> Lessons { get; set; }
+        public ICollection<Assignment> Assignments { get; set; }
+        #endregion
     }
 }

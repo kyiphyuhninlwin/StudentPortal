@@ -16,9 +16,9 @@ namespace StudentPortal.Models.DTO
                 return (ToDate - FromDate).Days;  // Returns duration in full days
             }
         }
-        public int LessonCount { get; set; }
-        public int StudentCount { get; set; }
         public decimal Price { get; set; }
-        public List<SubjectDTO> Subjects { get; set; } = new List<SubjectDTO>();
+        public ICollection<TeacherCourseDTO> TeacherCourses { get; set; } = new List<TeacherCourseDTO>();
+        public ICollection<SubjectDTO> Subjects { get; set; } = new List<SubjectDTO>();
+
     }
 }

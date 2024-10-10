@@ -7,10 +7,10 @@
         public string Url { get; set; }
         public DateTime DueDate { get; set; }
         public Guid StudentID { get; set; }
-        public Student Students { get; set; }
+        public Student Student { get; set; }
         public Guid SubjectID { get; set; }
-        public Subject Subjects { get; set; }
-        public Guid CourseID { get; set; }
-        public Course Courses { get; set; }
+        public Subject Subject { get; set; }
+        public Guid TeacherID { get; set; }
+        public Teacher Teacher { get; set; }
     }
 }

@@ -42,10 +42,7 @@ namespace StudentPortal.Models.DTO
         public string Address { get; set; }
         public Guid GenderID { get; set; }
         public Gender Gender { get; set; }
-        public Guid DeptID { get; set; }
-        public Department Department { get; set; }
-        public Guid CourseID { get; set; }
-        public Course Course { get; set; }
+        public ICollection<TeacherCourseDTO> TeacherCourses { get; set; } = new List<TeacherCourseDTO>();
         public Guid SubjID { get; set; }
         public Subject Subject { get; set; }
     }

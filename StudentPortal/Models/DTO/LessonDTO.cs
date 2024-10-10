@@ -9,7 +9,5 @@ namespace StudentPortal.Models.DTO
         public string Description { get; set; }
         public Guid SubjectID { get; set; }
         public Subject Subject { get; set; }
-        public Guid CourseID { get; set; }
-        public Course Course { get; set; }
     }
 }

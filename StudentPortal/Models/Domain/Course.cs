@@ -14,9 +14,11 @@
                 return (ToDate - FromDate).Days;  // Returns duration in full days
             }
         }
-        public int LessonCount { get; set; }
-        public int StudentCount { get; set; }
         public decimal Price { get; set; }
+
+        #region Relationships
+        public ICollection<TeacherCourse> TeacherCourses { get; set; }
         public ICollection<Subject> Subjects { get; set; }
+        #endregion
     }
 }
